@@ -1,8 +1,16 @@
 fun main() {
-    val trickFunction = trick
-    trick()
+    val treatFunction = trickOrTreat(false)
+    val trickFunction = trickOrTreat(true)
+    treatFunction()
     trickFunction()
-    treat()
+}
+
+fun trickOrTreat(isTrick: Boolean): () -> Unit {
+    if (isTrick) {
+        return trick
+    } else {
+        return treat
+    }
 }
 
 val trick = {
