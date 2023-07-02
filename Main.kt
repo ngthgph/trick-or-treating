@@ -1,6 +1,6 @@
 fun main() {
-    val coins: (Int) -> String = {quantity ->
-        "$quantity quarters"
+    val coins: (Int) -> String = {
+        "$it quarters"
     }
 
     val treatFunction = trickOrTreat(false, coins)
